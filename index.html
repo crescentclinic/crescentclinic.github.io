@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crescent Clinic Home Page</title>
+  <link rel="icon" type="image/x-icon" href="images/crescentclinic_logo.png">
+  <link media="only screen and (max-width: 481px)"  rel="stylesheet" href="css/mobileStyle.css">
+  <link media="only screen and (min-width: 482px)"  rel="stylesheet" href="css/desktopStyle.css">
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body onload="document.getElementById('defaultOpen').click(); cascadeMenu();">
+  <header>
+    <center>
+      <div>
+        <img class=logo src="images/crescentclinic_logo.png"/>
+        <h2>Crescent Clinic, Welcomes you : )</h2>
+      </div>
+      <div class="datetime">
+        <span id="time"> </span>
+      </div>     
+    </center>
+  </header>
+  <main>
+    <table class="col-noborder" align="center">
+      <td>
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'About Us')" >About Us</button>
+          <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+          <button class="tablinks" onclick="openTab(event, 'App')">App</button>
+          <button class="tablinks" onclick="openTab(event, 'Gallery')">Gallery</button>
+          <button class="tablinks" onclick="openTab(event, 'Notifications')" id="defaultOpen">Notifications</button>
+        </div>
+      </td>  
+    </table>
+
+  <!-- Tab content -->
+  <div id="About Us" class="tabcontent">
+    <h3>About Us</h3>
+    <p class="justify">Crescent Clinic is strategically established to address regional imbalances in healthcare services and research. Its established by "Dr Sulaikha I MBBS" with the help of her husband "Dr Hydress U MBBS" and Sons "Dr Ajmal U MBBS MD Paediatrics" and "Dr Haseeb U MBBS" along with suggestions from families and relatives. Together we thrives to deliver quality and affordable healthcare.</p>
+  </div>
+  <div id="Contact" class="tabcontent">
+    <h3>Contact</h3>
+    <p>Crescent Clinic, Chattipparamba<br>Near Capital Mall, Malappuram<br>Kerala, Pin 676503<br><br>9400268462<br><br>clinic.crescent@proton.me<br><br>3AFB FFED DC2B 1992 336F 04BB 32FC 753C 0E06 19E7<br></p>
+    <p><a href="https://www.google.com/maps/place/10%C2%B059'52.1%22N+76%C2%B005'30.6%22E/@10.9977937,76.0912858,249m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x6b2a1eef3ab26f04!8m2!3d10.9977924!4d76.091833" target="_blank">Jump to Google Maps or scan the QR Code for Geolocation</a><br><img src="images/location_qr.png" style="width:20%;height:20%;"></p>
+  </div>
+  <div id="App" class="tabcontent">
+    <h3>Crescent Clinic App</h3>
+    <p><a href="app/cc_v0.0.1.apk" download>Download Crescent Clinic Android App Version 0.0.1 Release Date 15-02-2023</a></p>
+    <p style="color:#ff0000">The app can be downloaded only via a browser by visiting</p>
+    <p style="color:#ff0000">https://crescentclinic.github.io/web</p>
+    <p class="justify" style="color:#ff0000">Verify the authenticity of the downloaded app by matching hash values given below. The app uses network state and network for functioning. No other permissions are required.</p>
+  <table align="center">
+    <tr>
+      <td>MD5</td>
+      <td class="hash-col">4494b9315b1961b710581146f70d2b65</td>
+    </tr>
+    <tr>
+      <td>SHA256</td>
+      <td class="hash-col">d4d37a3b7a4f1e89d94c060e78f7b0e3565150979f2acfc309b1af5ba9ac0b73</td>
+    </tr>
+    <tr>
+      <td>SHA1</td>
+      <td class="hash-col">404636510686a196d09b448f8268052b9da4bb58</td>
+    </tr>
+    <tr>
+      <td>CRC32</td>
+      <td class="hash-col">6cd63a33</td>
+    </tr>
+  </table>
+  </div> 
+  <div id="Gallery" class="tabcontent">
+    <h3>Gallery</h3>
+    <img class="gallery" src="images/b1.jpg"/>
+    <img class="gallery" src="images/b2.jpg"/>
+    <img class="gallery" src="images/b3.jpg"/>
+    <img class="gallery" src="images/b4.jpg"/>
+  </div> 
+
+  
+  <div id="Notifications" class="tabcontent" id="defaultOpen">
+    <h3>Notifications</h3>
+    <table align="center">
+      <tr>
+        <th>Date</th>
+        <th>Notification</th>
+        <th>Status</th>   
+      </tr>
+      <tr>
+        <td>29/01/23</td>
+        <td class="notification-col">Notification for rental of Medical Laboratory space (365 X 351 cm)  on contract basis. Contact Office for further enquiry<br><a href="pages/notification_1_doc_1.html">Click here for Draft Conditions</a></td>
+        <td>Active</td>
+      </tr>
+       <tr>
+        <td>29/01/23</td>
+        <td class="notification-col"><a href="cc_v0.0.1.apk" download></a>Notification for rental of Pharmacy space (375 X 351 cm) on contract basis. Contact Office for further enquiry<br><a href="pages/notification_2_doc_1.html">Click here for Draft Conditions</a></td>
+        <td>Active</td>
+      </tr>
+      <tr>
+        <td>25/01/23</td>
+        <td class="notification-col"><a href="cc_v0.0.1.apk" download></a>Notification for rental of Consultation Room on contract basis for 5 yr term 24x365x5 and for 1 yr term with weekly or half day slot. Contact Office for further enquiry<br><a href="pages/notification_3_doc_1.html">Click here for Draft Conditions for 5 yrs</a><br><a href="pages/notification_3_doc_2.html">Click here for Draft Conditions for 1 yr</a></td>
+        <td>Active</td>
+      </tr>
+      
+    </table>
+  </div>  
+</main>
+
+<footer class="footer">
+  <div>
+    <h5>&copy; 2023 Crescent Clinic. All Rights Reserved</h5>
+  </div> 
+</footer>
+</body>
+</html>

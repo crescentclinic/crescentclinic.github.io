@@ -1,153 +1,80 @@
-h1  {
-    font-family: sans-serif;
-    font-size: 6vw;
-  }
+h1 {
+  font-size: 8vw;
+}
 
-h2  {
-    font-family: sans-serif;
-    font-size: 5vw;
-  }
+h2 {
+  font-size: 7vw;
+}
 
-h3  {
-    font-family: sans-serif;
-    font-size: 4vw;
-  }
+h3 {
+  font-size: 6vw;
+}
 
-h4  {
-    font-family: sans-serif;
-    font-size: 3vw;
-  }
+h4 {
+  font-size: 5vw;
+}
 
-h5  {
-    font-family: sans-serif;
-    font-size: 2vw;
-  }
+h5 {
+  font-size: 4vw;
+}
 
-h6  {
-    font-family: sans-serif;
-    font-size: 1vw;
-  }
+h6 {
+  font-size: 3vw;
+}
 
-p   {
-    font-family: sans-serif;
-    font-size: 4vw;
-  }
-
-div {
-    text-align: center;
-    align-items: center;
-  }
+p {
+  font-size: 2.5vw;
+}
 
 table {
-    border: 0.5vw solid black;
-    border-radius: 2vw;
-    align-content: center;
-    font-family: sans-serif;
-    font-size: 3vw;
-    padding: 0.5vw;
-    min-width: 90vw;
-    max-width: 90vw;
-  }
+  border: 0.5vw solid black;
+  border-radius: 2vw;
+  min-width: 90vw;
+  max-width: 92vw;
+  padding: 0.5vw;
+}
 
 td {
-    border: 0.5vw solid black;
-    border-radius: 2vw;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 3vw;
-    padding: 0.5vw;
-  }
-
-
+  border: 0.5vw solid black;
+  border-radius: 2vw;
+}
 
 th {
-    border: 0vw solid black;
-    background: rgb(256,256,256);
-    border-radius: 2vw;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 3vw;
-    padding: 0.5vw;
-  }     
+  border: none;
+  background: rgb(256, 256, 256);
+  text-align: center;
+}
 
 body {
   background: rgb(255, 255, 255);
- }
-      
-
-.justify {
-  text-align: justify;
 }
-
-.notification-col {
-  border: 0.5vw solid black;
-  border-radius: 2vw;
-  text-align: left;
-  align-content: stretch; 
-  font-family: sans-serif;
-  font-size: 2vw;
-  padding: 0.5vw;
-}
-.hash-col {
-  border: 0.5vw solid black;
-  border-radius: 2vw;
-  text-align: left;
-  align-content: stretch; 
-  font-family: sans-serif;
-  font-size: 2vw;
-  padding: 0.5vw;
-}
-
-
 
 .logo {
-  width:10%;
-  height:auto;
+  width: 10vw;
+  height: auto;
 }
-    
-.datetime {
-  text-align: center;
-  font-size: 4vw;
-  padding: 0.5vw;
-}
-
-
-
-.col-noborder {
-  border: 0vw ;
-  text-align: center;
-  align-content: stretch; 
-  font-family: sans-serif;
-  font-size: 2vw;
-  padding-top: 1vw;
-  padding-bottom: 1vw;
-}
-
 
 /* Style the tab */
 .tab {
   overflow: hidden;
   border: 0.5vw solid #000000;
-  background-color: rgb(153,153,151);
-  border-radius: 2vw;
+  background-color: rgb(153, 153, 151);
+  border-radius: 1vw;
   width: 90vw;
   box-align: center;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  background-color: rgb(153,153,151);
+  background-color: rgb(153, 153, 151);
   border: none;
   float: left;
   outline: none;
   cursor: pointer;
-  padding: 0.5vw 0.5vw;
-  font-size: 3vw;
-  font-family: sans-serif;
-  font-weight: bolder;  
+  font-weight: bolder;
+  font-size: 2.5vw;
   transition: 0.3s;
-  width:33.3%
-
+  width: 33.3%
 }
 
 /* Change background color of buttons on hover */
@@ -165,12 +92,17 @@ body {
   display: none;
   border: none;
   width: 100%;
-  animation: fadeEffect 0.5s; /* Fading effect takes 1 second */
-}
-/* Go from zero to full opacity */
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  animation: fadeEffect 0.5s;
+  /* Fading effect takes 1 second */
 }
 
-   
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

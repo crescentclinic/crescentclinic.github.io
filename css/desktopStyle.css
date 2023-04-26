@@ -126,12 +126,7 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.gallery {
-  width:90%;
-  border-radius: 5px;
-  border: 2px solid rgb(153,153,151);
 
-}
      
 /* Style the tab */
 .tab {
@@ -155,7 +150,7 @@ body {
   font-weight: bolder;  
   font-size: 100%;  
   transition: 0.3s;
-  width:20%
+  width:33.3%
 }
 
 /* Change background color of buttons on hover */

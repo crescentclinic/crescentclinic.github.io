@@ -9,10 +9,6 @@
   <link media="only screen and (max-width: 481px)" rel="stylesheet" href="css/mobileStyle.css">
   <link media="only screen and (min-width: 482px)" rel="stylesheet" href="css/desktopStyle.css">
   <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/openpgp.min.js"></script>
-  <script type="text/javascript" src="js/crypto.min.js"></script>
-
 </head>
 
 <body onload="document.getElementById('defaultOpen').click();">
@@ -78,22 +74,22 @@
           </tr>
           <tr>
             <th>
-              <p style="text-align: center;">MD5</p>
+              <p>MD5</p>
             </th>
           <tr>
-            <td>
-              <p style="text-align: center;">9cdf1cc81b5c6bc41ef1c833bda3ead9</p>
+            <td style="text-align: center;">
+              <p>9cdf1cc81b5c6bc41ef1c833bda3ead9</p>
             </td>
           </tr>
           </tr>
           <tr>
             <th>
-              <p style="text-align: center;">SHA256</p>
+              <p>SHA256</p>
             </th>
           </tr>
           <tr>
-            <td>
-              <p style="text-align: center;">377bb4eb0d06562b204caa35e65bbc0d12e92d9eebfa5641311aa31b626069d8</p>
+            <td style="text-align: center;">
+              <p>377bb4eb0d06562b204caa35e65bbc0d12e92d9eebfa5641311aa31b626069d8</p>
             </td>
           </tr>
         </table>
@@ -101,39 +97,42 @@
         <h4>Contact Us</h4>
         <table>
           <tr>
-            <td style="border:none;text-align: center;" colspan="2">
+            <td style="text-align: center;">
               <h6>Crescent Clinic, Chattipparamba<br>Near Capital Mall,
                 Malappuram<br>Kerala, Pin 676503<br><br>9400268462<br>clinic.crescent@proton.me</h6>
             </td>
+            <td style="text-align: center;">
+              <p>
+                <a
+                  href="https://www.google.com/maps/place/10%C2%B059'52.1%22N+76%C2%B005'30.6%22E/@10.9977937,76.0912858,249m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x6b2a1eef3ab26f04!8m2!3d10.9977924!4d76.091833">
+                  Click here
+                </a>
+              </p>
+              <p>or<br>Scan the QR<br>for Geolocation</p>
+              <img src="images/location_qr.webp" style="width:auto;height: 20vh;">
+
+            </td>
           <tr>
           <tr>
-            <td colspan="2" style="text-align: justify;">
-              <p style="text-align: justify;">Send us a secure message using our <a
-                  href="pgp/crescent_clinic_pgp_public_key.asc" download>PGP Public Key</a>. Or Type
+            <td colspan="2">
+              <p style="text-align: justify;">Send us a secure message using our <a href="pgp/cc_pubkey.asc"
+                  download>PGP Public Key</a>. Or Type
                 the message along with communication mode and address,then click Encrypt. After that, copy the generated
                 text and send it to us by e-mail <b>clinic.crescent@proton.me</b> or any other form of textual
                 communication.
                 Only we will be able to read the message.</p>
+
               <p style="text-align: center;">
+
                 <textarea id="input" class="contact-form"
-                  style="width: 80vw;height:20vw;border: 0.5vw solid black;border-radius: 1vw; text-align: justify;font-size: 2.5vw;">
+                  style="width: 40vw;height:20vw;border: 0.5vw solid black;border-radius: 1vw; text-align: justify;">
               </textarea>
                 <br>
                 <button id="button" class="btn btn-warning"
                   style="background-color: rgb(153,153,151); color: black; border-color: black; border-radius: 2vw;text-align: center;">Encrypt</button>
+                  <button id="copy-button" 
+                  style="background-color: rgb(153,153,151); color: black; border-color: black; border-radius: 2vw;text-align: center;" onclick="copy()">Copy</button>  
               </p>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <a
-                href="https://www.google.com/maps/place/10%C2%B059'52.1%22N+76%C2%B005'30.6%22E/@10.9977937,76.0912858,249m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x6b2a1eef3ab26f04!8m2!3d10.9977924!4d76.091833">
-                <h6>Click here</h6>
-              </a>
-              <p>or<br>Scan the QR<br>for Geolocation</p>
-            </td>
-            <td style="text-align: center;">
-              <img src="images/location_qr.webp" style="width:30vw;height: auto;">
             </td>
           </tr>
         </table>
@@ -208,13 +207,15 @@
         </table>
       </div>
     </main>
-
     <footer class="footer">
       <h6>
         &copy; 2023 Crescent Clinic. All Rights Reserved
       </h6>
     </footer>
   </center>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/openpgp.min.js"></script>
+  <script type="text/javascript" src="js/crypto.min.js"></script>
 </body>
 
 </html>

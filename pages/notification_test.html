@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documents</title>
+  <link rel="icon" type="image/x-icon" href="images/crescentclinic_logo.png">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/pdfobject.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      PDFObject.embed("cc-pc.pdf", "#pdf_view");
+    });
+  </script> 
+  <style>
+    .pdfobject-container { height: 80vh;width: 90vw;}
+    .pdfobject { border: 1px solid #666; }
+    </style>
+
+</head>
+<body>
+<center>
+
+    <main>
+            <button class='backBtn' style="position: fixed;left: 80vw; bottom: 10vh;background-color: rgb(153,153,151); color: black; border-color: black; border-radius: 5px;" onclick="history.back(-1)">Back</button>
+
+      <div class="container" style="padding:10px 10px;">
+      <div id="pdf_view"></div>
+     
+      </div>
+
+     
+
+    </main>
+    <footer class="footer">
+        <div>
+          <h5>&copy; 2023 Crescent Clinic. All Rights Reserved</h5>
+        </div> 
+    </footer>
+</center>
+
+</body>   
+</html>
+

@@ -34,6 +34,13 @@ table {
   padding: 0.5vw;
 }
 
+.sticky {
+  position: fixed;
+  top: 1vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 td {
   border: 0.5vw solid black;
   border-radius: 2vw;
@@ -63,6 +70,8 @@ body {
   width: 90vw;
   box-align: center;
 }
+
+
 
 /* Style the buttons that are used to open the tab content */
 .tab button {

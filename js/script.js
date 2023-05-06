@@ -10,11 +10,7 @@ function refreshTime() {
 setInterval(refreshTime, 1000);
 
 
-function copy() {
-  let textarea = document.getElementById("input");
-  textarea.select();
-  document.execCommand("copy");
-}
+
 
 function openTab(evt, tabName) {
   // Declare all variables
@@ -37,3 +33,13 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
+window.onscroll = function () { myFunction() };
+var tab = document.getElementById("tab");
+var sticky = tab.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    tab.classList.add("sticky")
+  } else {
+    tab.classList.remove("sticky");
+  }
+}

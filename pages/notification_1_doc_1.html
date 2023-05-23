@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Documents</title>
   <link rel="icon" type="image/x-icon" href="images/crescent_clinic_logo.webp">
+  <style>
+    body {
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    @media (min-width: 481px) {
+      body {
+        width: 60vw;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        width: 100vw;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<center>
-    <head>
+  <header>
 
-    </head>
-    <main>
-        
-        <button class='backBtn' style="position: fixed; left: 75%;bottom: 10%;background-color: rgb(153,153,151); color: black; border-color: black; border-radius: 5px;" onclick="history.back(-1)">Back</button>
-        <img style="width: 90%;" src="images/cc-cc-5yr.webp"/>
+  </header>
+  <main>
 
-    </main>
-    <footer class="footer">
-        <div>
-          <h5>&copy; 2023 Crescent Clinic. All Rights Reserved</h5>
-        </div> 
-    </footer>
-</center>
+    <button class='backBtn'
+      style="position: fixed; left: 70%;bottom: 10%;background-color: rgb(153,153,151); color: black; border-color: black; border-radius: 5px;"
+      onclick="history.back(-1)">Back</button>
+    <img style="width: 100%;" src="images/cc-cc-5yr.webp" />
 
-</body>    
+  </main>
+  <footer class="footer">
+    <div>
+      <h5>&copy; 2023 Crescent Clinic. All Rights Reserved</h5>
+    </div>
+  </footer>
+
+</body>
+
+</html>

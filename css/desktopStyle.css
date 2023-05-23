@@ -29,8 +29,8 @@ p {
 table {
   border: 0.5vh solid black;
   border-radius: 2vh;
-  min-width: 50vw;
-  max-width: 52vw;
+  min-width: 58vw;
+  max-width: 60vw;
   padding: 0.5vh;
 }
 
@@ -54,6 +54,9 @@ th {
 
 body {
   background: rgb(255, 255, 255);
+  width: 60vw;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .logo {
@@ -67,7 +70,6 @@ body {
   border: 0.5vh solid #000000;
   background-color: rgb(153, 153, 151);
   border-radius: 1vh;
-  width: 50vw;
   box-align: center;
 }
 

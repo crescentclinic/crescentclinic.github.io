@@ -1,17 +1,3 @@
-
-var datetime = new Date();
-console.log(datetime);
-
-function refreshTime() {
-  const timeDisplay = document.getElementById("time");
-  const dateString = new Date().toLocaleString('en-us', { weekday: "long", day: "numeric", month: "short", year: "numeric", hour: "numeric", minute: "numeric", second: "numeric" });
-  timeDisplay.textContent = dateString;
-}
-setInterval(refreshTime, 1000);
-
-
-
-
 function openTab(evt, tabName) {
   // Declare all variables
   var i, tabcontent, tablinks;

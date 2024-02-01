@@ -36,8 +36,7 @@ p {
 table {
   border: 0.5vw solid black;
   border-radius: 2vw;
-  min-width: 88vw;
-  max-width: 90vw;
+  width: 90vw;
   padding: 0.5vw;
 }
 
@@ -64,6 +63,7 @@ body {
   width: 90vw;
   margin: 0 auto;
   padding: 0;
+
 }
 
 .logo {
@@ -78,6 +78,7 @@ body {
   background-color: rgb(153, 153, 151);
   border-radius: 1vw;
   box-align: center;
+
 }
 
 
@@ -124,3 +125,10 @@ body {
     opacity: 1;
   }
 }
+
+.nav{
+  position: fixed; 
+  bottom: 2%;
+
+}
+

@@ -23,7 +23,7 @@ window.onscroll = function () { myFunction() };
 var tab = document.getElementById("tab");
 var sticky = tab.offsetTop;
 function myFunction() {
-  if (window.pageYOffset >= sticky) {
+  if (window.scrollY>= sticky) {
     tab.classList.add("sticky")
   } else {
     tab.classList.remove("sticky");

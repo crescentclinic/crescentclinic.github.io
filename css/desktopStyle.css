@@ -71,7 +71,9 @@ body {
   width: 60vw;
   margin: 0 auto;
   padding: 0;
-}
+
+  }
+
 
 .logo {
   width: 10vh;
@@ -129,4 +131,8 @@ body {
   to {
     opacity: 1;
   }
+}
+.nav{
+  margin-top: 20px;
+
 }

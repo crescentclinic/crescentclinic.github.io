@@ -2,253 +2,356 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crescent Medical Centre Home Page</title>
-  <link rel="icon" type="image/x-icon" href="images/crescent_clinic_logo.webp">
-  <link media="only screen and (max-width: 480px)" rel="stylesheet" href="css/mobileStyle.css">
-  <link media="only screen and (min-width: 481px)" rel="stylesheet" href="css/desktopStyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title>Crescent Clinic</title>
+    <style>
+        body {
+            font-family: 'Open Sans', 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #F9FBFC;
+            /* clean white-blue */
+            color: #1A1A1A;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.25rem;
+            /* 36px */
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+            /* deep blue for emphasis */
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            /* 36px */
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+            /* deep blue for emphasis */
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            /* 24px */
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #0077B6;
+            /* strong medical blue */
+        }
+
+        h4 {
+            font-size: 1rem;
+            /* 24px */
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ffffff;
+            /* strong medical blue */
+        }
+
+        p {
+            font-size: 1rem;
+            /* 16px */
+            font-weight: 400;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 1em;
+            color: #1A1A1A;
+        }
+
+        /* Header */
+        header {
+            background-color: #0077B6;
+            color: #FFFFFF;
+            padding: 20px 30px;
+            text-align: left;
+            height: auto;
+        }
+
+        /* Main Content */
+        main {
+            background-color: #E3F2F9;
+            text-align: justify;
+            padding: 20px;
+            height: auto;
+
+
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #0077B6;
+            color: #FFFFFF;
+            font-size: 14px;
+            padding: 10px;
+            height: auto;
+        }
+
+        /* Tab Buttons */
+        .tablink {
+            background-color: #00A6A6;
+            color: #FFFFFF;
+            float: left;
+            border: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 20%;
+            transition: background-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .tablink:hover {
+            background-color: #0090A6;
+        }
+
+        /* Tab Content */
+        .tabcontent {
+            display: none;
+            height: fit-content;
+            padding: 100px 20px;
+            color: #1A1A1A;
+            font-family: inherit;
+        }
+
+        /* Backgrounds for Tabs */
+        #Info {
+            background-color: #C7F9CC;
+        }
+
+        #Services {
+            background-color: #D0F4DE;
+        }
+
+        #OurDoctors {
+            background-color: #B5EAEA;
+        }
+
+        #Events {
+            background-color: #E3F2F9;
+        }
+
+        #Articles {
+            background-color: #DFF6FF;
+        }
+
+        .link {
+            color: white;
+            background: #0077B6;
+            padding: 1px 4px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .logoimg {
+            width: 100px;
+            height: 100px;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+
 </head>
 
-<body onload="document.getElementById('defaultOpen').click();">
-<center>
+<body>
     <header>
- 
-     </header>
+                    <h4>Welcome to the official website of</h4>
+                    <h1>Crescent Clinic</h1>
+
+
+    </header>
     <main>
-      <table id="tab" class="nav" style="background-color: black;">
-        <tr style="color: white;background-color: black;">
-          <th colspan="4" style="color: white;background-color: black;"><p>Crescent Medical Centre</p></th>
-        </tr>
-        <tr>
-          <td style="border:none;">
-            <div class="tab">
-              <button class="tablinks" onclick="openTab(event, 'Info')">Info</button>
-              <button class="tablinks" onclick="openTab(event, 'App')">App</button>
-              <button class="tablinks" onclick="openTab(event, 'Services')" id="defaultOpen">Services</button>
-              <button class="tablinks" onclick="openTab(event, 'Notifications')" >Notifications</button>
-            </div>
-          </td>
-        </tr>
-      </table>
-      
 
-      <!-- Tab content -->
-      <div id="Info" class="tabcontent">
-        <h4>Enquiry</h4>
-        <table>
-          <tr>
-            <td style="text-align: center;">
-              <p>9447905050<br>04933283050<br><a href="https://wa.me/919447905050?text=I%20would%20like%20to%20book%20an%20appointment"><img class="whatsapp" src="images/whatsapp_button_green.png"></a>
-                <br>clinic.crescent@proton.me
-            </td>
-          </tr>
-        </table>
+        <button type="button" class="tablink" onclick="openPage('Info', this, '#2D6A4F')" id="defaultOpen">Info</button>
+        <button type="button" class="tablink" onclick="openPage('Services', this, '#40916C')">Services</button>
+        <button type="button" class="tablink" onclick="openPage('OurDoctors', this, '#168AAD')">Our Doctors</button>
+        <button type="button" class="tablink" onclick="openPage('Events', this, '#1D4E89')">Events</button>
+        <button type="button" class="tablink" onclick="openPage('Articles', this, '#0D3B66')">Articles</button>
 
 
-        <h4>Address</h4>
-        <table>
-          <tr>
-            <td style="text-align: center;">
-              <p>Crescent Medical Centre, Chattipparamba<br>Building No: 5/BB, Ward 17<br>Near Capital Mall, Malappuram<br>Kerala, Pin 676504</p>
-            </td>
-            <td style="text-align: center;">
-              <p>Scan or Click</p>
-              <a
-                href="https://www.google.com/maps/place/10%C2%B059'52.1%22N+76%C2%B005'30.6%22E/@10.9977937,76.0912858,249m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x6b2a1eef3ab26f04!8m2!3d10.9977924!4d76.091833"><img
-                  src="images/location_qr.webp" style="width:auto;height: 10vh;"></a>
-            </td>
-          </tr>
-        </table>
+        <div id="Info" class="tabcontent">
+            <h3>For Enquiry, Booking and Grievances</h3>
+            <table>
+                <tr>
+                    <td>
+                        <p>Address: </p>
+                        <p>Email: </p>
+                        <p>Phone/Whatsapp:</p>
 
-        <h4>Licenses</h4>
+                    </td>
+                    <td>
+                        <p><a href="https://www.google.com/maps/place/10%C2%B059'52.1%22N+76%C2%B005'30.6%22E/@10.9977937,76.0912858,249m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x6b2a1eef3ab26f04!8m2!3d10.9977924!4d76.091833"
+                                class="link"> Chattipparamba, Perinthalmanna Rd, Near Capital Mall, Malappuram Pin:
+                                676504</a></p>
 
-        <table>
-          <tr>
-            <th style="text-align: center;" colspan="2">
-              <p>Private Hospital and Paramedical Institutions Registration Certificate</p>
-            </th>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <p>Issuing Authority<br>Identification Number<br>Validity</p>
-            </td>
-            <td style="text-align: center;">
-              <p>LSGD Kuruva Grama Panchayath<br>A7/2283/2023<br>13/04/2023 - 12/04/2024</p>
-            </td>
-          </tr>
-         
-          <tr>
-            <th style="text-align: center;" colspan="2">
-              <p>Industry, Trade and Commercial License</p>
-            </th>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <p>Issuing Authority<br>Identification Number<br>Validity</p>
-            </td>
-            <td style="text-align: center;">
-              <p>LSGD Kuruva Grama Panchayath<br>604/2023-2024/A-7/961/2023<br>01/04/023 - 31/03/2024</p>
-            </td>
-          </tr>
-          
-          <tr>
-            <th style="text-align: center;" colspan="2">
-              <p> Authorisation for operating a facility for Generation or Segregation or Storage of Bio-medical Waste
-            </th>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <p>Issuing Authority<br>Identification Number<br>Validity</p>
-            </td>
-            <td style="text-align: center;">
-              <p>Kerala State Pollution Control Board<br>KSPCB/MA/BMW/100711172024<br>14/06/2024 - Perpetual(Conditionally)</p>
-            </td>
-          </tr>
-            <tr>
-            <th style="text-align: center;" colspan="2">
-              <p>Indian Medical Association Goes Ecofriendly Certificate</p>
-            </th>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <p>Issuing Authority<br>Identification Number<br>Validity</p>
-            </td>
-            <td style="text-align: center;">
-              <p>Indian Medical Association<br>Aff.No.MPM.2843<br>29/05/2024 - Perpetual(Conditionally)</p>
-            </td>
-          </tr>
-         </table>
+                        <p><a href="mailto:clinics.crescent@gmail.com" class="link">clinics.crescent@gmail.com</a></p>
+                        <p><a href="https://wa.me/916282469048?text=Hello" target="_blank" class="link">6282469048</a>
+                        </p>
 
-        
+                    </td>
+                </tr>
+            </table>
+            <h3>Consultation Policy</h3>
+            <p>
+                <b>Token:-</b> A valid token is mandatory for each consultation. Consultation will be based on token
+                order. Bystanders should take token separately for consultation. Both new patients and those with
+                previous prescriptions must obtain a token. No token is required for the first follow-up visit if it
+                occurs within one week of the previous consultation.
+            </p>
+            <p>
+                <b>Emergency & Accident Cases:-</b> We provides outpatient services only. We do not offer inpatient
+                care, emergency care and trauma care. For emergency or trauma care, please visit a properly equipped
+                Emergency Department or casualty. We accepts no liability for adverse outcomes caused by delays in
+                seeking emergency care. Consultations here are conducted on a token basis, not by emergency triage.
+            </p>
+            <p>
+                <b>Consultation Guidelines:-</b> Only one bystander is allowed per patient in the consultation room or
+                observation area. Bystander presence is mandatory for children and female patients. Bystander presence
+                is required during suturing, surgical procedures, or drug administration. Bystander must be at least 18
+                years old and of sound mind. Consultation and procedure charges are fixed and non-negotiable. If
+                unacceptable, please leave without dispute. The doctor manages both outpatients and walk-in emergency
+                cases; delays may occur. If this is unacceptable, please seek care at another clinic or hospital.
+            </p>
+            <p>
+                <b>Home Services, Telecommunication and booking:-</b> No home services are provided. In case of an
+                emergency outside clinic hours, visit the nearest hospital with an Emergency Department. Digital
+                communication (SMS, email, WhatsApp) is provided for administrative convenience only. It is not a
+                substitute for in-person medical consultation. We are not responsible for any consequences arising from
+                delayed, missed, or misunderstood digital communication. Medical advice will not be provided via phone,
+                social media, or messaging platforms without a formal in-person consultation. This establishment do not
+                allows prior booking.
+            </p>
+            <p>
+                <b>Conduct Inside the Clinic:-</b> Keep phones silent. Maintain quiet and discipline; avoid shouting,
+                arguments, or creating disturbances. Damaging clinic property will result in legal action. Photography,
+                video or audio recording without prior permission is prohibited. Wearing a mask is mandatory inside
+                clinic premises. Do not bring children unless they are being consulted, to minimize risk of exposure to
+                infection. The clinic is not a place for displaying influence (muscle power, wealth, political
+                connections) to seek priority treatment, any occasions will be dealt accordingly.
+            </p>
+            <p>
+                <b>Disputes & Grievances:-</b> Submit any complaints or grievances in writing at the reception desk,
+                including your contact details.
+            </p>
+            <p>
+                <b>Disclaimer & Limitation of Liability:-</b> Medical advice and treatment provided at this clinic are
+                based entirely on the information voluntarily disclosed by the patient during consultation. We are not
+                liable for outcomes influenced by incomplete, inaccurate, or withheld information, self medication,
+                altering treatment without consultation, non adherence to treatment or followup. Treatment results vary
+                among individuals; no guarantees are provided or implied. While all reasonable efforts are made to
+                minimize risks, we cannot be held liable for unforeseen adverse reactions to medications, including side
+                effects, allergic responses, reactions related to undiagnosed medical conditions.
+            </p>
+            <p>
+                <b>Legal Protection:-</b> This establishment and its staff are protected under the Kerala Healthcare
+                Service Persons and Healthcare Service Institutions (Prevention of Violence and Damage to Property) Act,
+                2012, and the Bharatiya Nyaya Sanhita (BNS), 2023. Assault, intimidation, threat, harassment, or
+                obstruction of doctors, nurses, or any clinic staff is a criminal offense punishable with imprisonment
+                of up to three years and a fine of up to ₹50,000. Damage to clinic property, including medical
+                equipment, furniture, records, or any other assets, is punishable with imprisonment of up to five years,
+                fine, and full recovery of damages from the offender. All such offenses are cognizable and non-bailable.
+                The clinic will take strict legal action and file an FIR under the applicable sections of the BNS and
+                the Kerala Act, 2012, without exception. All patients and visitors are expected to maintain discipline,
+                respect healthcare staff, and protect clinic property at all times.
+            </p>
+        </div>
 
-      </div>
+        <div id="Services" class="tabcontent">
+            <h3>Medical Services</h3>
+            <ul>
+                <li>Medical Consultations</li>
+                <li>Disease Preventive Life Style</li>
+                <li>Acute &amp; Chronic illness management</li>
+                <li>Observation &amp; Care</li>
+            </ul>
+            <br>
+            <h3>Surgical Services</h3>
+            <ul>
+                <li>Wound Suturing</li>
+                <li>Incision and drainage of abscess</li>
+                <li>Excision of moles, warts, corns</li>
+                <li>Burns &amp; Wound care</li>
+                <li>Nail removal</li>
+            </ul>
+            <h3>Procedural Services</h3>
+            <ul>
+                <li>Urinary Bladder Catheterisation</li>
+                <li>Ryles Tube Insertion</li>
+                <li>Phlebotomy</li>
+                <li>IV Cannulation</li>
+                <li>PoP Casts for fracture or Immobilisation</li>
+                <li>Ear piercing</li>
 
-      <div id="App" class="tabcontent">
-        <h4>Mobile App</h4>
-        <table>
-          <tr>
-            <td colspan="2" style="border:none;">
-              <p style="text-align: center;">Crescent Clinic Android Ap - Version: 0.5 - Release Date : 10-06-2024<br><a href="app/ccv0.5.apk" download> Download </a></p>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" style="border:none;">
-              <P style="color:#ff0000;text-align: justify; font-size: 2vw;">
-                The app can be downloaded only via a browser by visiting <b>https://crescentclinic.github.io</b>. Verify the
-                authenticity of the downloaded app by matching hash values given below. The app uses network state and
-                network for functioning. No other permissions are required.
-              </P>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <p><b>MD5</b><br>79bfd931d3159f48c6d8e0ecbaf8d95e</p>
-            </td>
-          </tr>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <p><b>SHA256</b><br>fcba0750d538ed5de7844240d728d7928541bdad3791557f9e5213d4a8e4fa5d</p>
-            </td>
-          </tr>
-        </table>
-      </div>
+            </ul>
+            <br>
+            <h3>Certificates Services</h3>
 
-      <div id="Services" class="tabcontent" id="defaultOpen">
-        <h4>Doctors</h4>
-        <table>
-          <tr>
-            <th style="text-align: center;" colspan="2">
-              <p style="text-align: center;">General Practitioner</p>
-            </th>
-            </tr>
-            <tr>
-            <td style="text-align: center;">
-              <p>
-               <b>Dr Muhammed Haseeb U, MBBS</b><br>02:00 PM to 08:00 PM, Thursday Off<br> Fees: Rs 150
-              </p>
-            </td>
-            </tr>
-            <tr>
-              <th style="text-align: center;" colspan="2">
-                <p style="text-align: center;">Paediatrics</p>
-              </th>
-              </tr>
-              <tr>
-            <td style="text-align: center;">
-              <p>
-                <b>Dr Mohammed Ajmal U, MBBS MD (Pediatrics)</b><br>05:00 PM to 08:30 PM<br> Fees: Rs 200
-              </p>
-            </td>
-          </tr>
-        </table>
-      </div>
+            <ul>
+                <li>Age Certificate</li>
+                <li>Food Handler's Certificate</li>
+            </ul>
 
-      <div id="Notifications" class="tabcontent">
-        <h4>Notifications</h4>
-        <table>
-          <tr>
-            <th>
-              <p>Date</p>
-            </th>
-            <th>
-              <p>Notifications</p>
-            </th>
-            <th>
-              <p>Status</p>
-            </th>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <p>25/12/23</p>
-            </td>
-            <td style="text-align: justify;">
-              <p>Notification for opening of job position for Pharmacist. Preference for the near. Contact Office
-                for further enquiry.
-              </p>
-            </td>
-            <td style="text-align: center;background-color: mediumspringgreen;">
-              <p>Active</p>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <p>25/12/23</p>
-            </td>
-            <td style="text-align: justify;">
-              <p>Notification for opening of job position for Lab Technician. Preference for the near. Contact Office
-                for further enquiry.
-              </p>
-            </td>
-            <td style="text-align: center;background-color: mediumspringgreen;">
-              <p>Active</p>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">
-              <p>25/12/23</p>
-            </td>
-            <td style="text-align: justify;">
-              <p>Notification for opening of job position for Nursing staff. Preference for the near. Contact Office
-                for further enquiry.
-              </p>
-            </td>
-            <td style="text-align: center;background-color: mediumspringgreen;">
-              <p>Active</p>
-            </td>
-          </tr>
-        </table>
-      </div>
+        </div>
+
+        <div id="OurDoctors" class="tabcontent">
+              <h3>Dr. Muhammed Haseeb U, M.B.B.S , General Practitioner</h3>
+            <p>
+                Dr. Haseeb is a highly respected physician with over 5 years of clinical experience. A proud alumnus of
+                <b>AIIMS (All India Institute Of Medical Sciences, Patna)</b>, where he developed broad expertise in
+                managing acute and chronic illnesses, in-patient care, medical emergencies, and critical care cases of
+                varying age groups and gender. He has since built a reputation for medical excellence, compassion, and a
+                patient-first approach. He has also served at <b>Government Medical College, Wayanad</b>. Currently, he
+                serves as a physician with us, where he is known for combining in-depth medical knowledge with
+                attentive, individualized care. Driven by a commitment to continuous learning and ethical practice, he
+                remains actively engaged in the latest developments in medicine, ensuring that patients receive the most
+                up-to-date and effective treatments available.
+            </p>
+
+        </div>
+
+        <div id="Events" class="tabcontent">
+              <h3>Events</h3>
+        </div>
+
+        <div id="Articles" class="tabcontent">
+            <h3>Articles</h3>
+            <p>This section will focus on personal clinical experiences, preventive lifestyle advices</p>
+        </div>
     </main>
-    <footer class="footer">
-      <h6>
-        &copy; 2023 Crescent Clinic. All Rights Reserved
-      </h6>
-     
+    <footer>
+        &copy; 2025 Crescent Clinic. All rights reserved.
+        <script>
+            function openPage(pageName, elmnt, color) {
+                // Hide all elements with class="tabcontent" by default */
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Remove the background color of all tablinks/buttons
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+
+                // Show the specific tab content
+                document.getElementById(pageName).style.display = "block";
+
+                // Add the specific color to the button used to open the tab content
+                elmnt.style.backgroundColor = color;
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click(); 
+        </script>
     </footer>
-    <script type="text/javascript" src="js/script.js"></script>
-</center>
 </body>
 
 </html>

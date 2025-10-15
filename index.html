@@ -1,199 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crescent Clinic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
 
-    <title>Crescent Clinic</title>
-    <style>
-        body {
-            font-family: 'Open Sans', 'Segoe UI', Roboto, Arial, sans-serif;
-            background-color: #F9FBFC;
-            /* clean white-blue */
-            color: #1A1A1A;
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Open Sans', 'Segoe UI', Roboto, Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Typography */
-        h1 {
-            font-size: 2.25rem;
-            /* 36px */
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #ffffff;
-            /* deep blue for emphasis */
-        }
+    h1, h2, h3, h4 {
+      margin-bottom: 15px;
+    }
 
-        h2 {
-            font-size: 1.9rem;
-            /* 36px */
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #ffffff;
-            /* deep blue for emphasis */
-        }
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #fff;
+    }
 
-        h3 {
-            font-size: 1.5rem;
-            /* 24px */
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #0077B6;
-            /* strong medical blue */
-        }
+    h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #fff;
+    }
 
-        h4 {
-            font-size: 1rem;
-            /* 24px */
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #ffffff;
-            /* strong medical blue */
-        }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #b30000; /* Occasional red for emphasis */
+    }
 
-        p {
-            font-size: 1rem;
-            /* 16px */
-            font-weight: 400;
-            line-height: 1.6;
-            text-align: justify;
-            margin-bottom: 1em;
-            color: #1A1A1A;
-        }
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ddd;
+    }
 
-        /* Header */
-        header {
-            background-color: #0077B6;
-            color: #FFFFFF;
-            padding: 20px 30px;
-            text-align: left;
-            height: auto;
-        }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #222;
+      text-align: justify;
+    }
 
-        /* Main Content */
-        main {
-            background-color: #E3F2F9;
-            text-align: justify;
-            padding: 20px;
-            height: auto;
+    /* Header */
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 25px 30px;
+      text-align: left;
+    }
 
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
 
-        }
+    /* Main Area */
+    main {
+      background-color: #fff;
+      padding: 20px;
+    }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            background-color: #0077B6;
-            color: #FFFFFF;
-            font-size: 14px;
-            padding: 10px;
-            height: auto;
-        }
+    /* Tabs */
+    .tablink {
+      background-color: #333;
+      color: #fff;
+      float: left;
+      border: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 25%;
+      transition: all 0.3s ease;
+    }
 
-        /* Tab Buttons */
-        .tablink {
-            background-color: #00A6A6;
-            color: #FFFFFF;
-            float: left;
-            border: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            font-size: 17px;
-            width: 25%;
-            transition: background-color 0.3s ease;
-            font-family: inherit;
-        }
+    .tablink:hover {
+      background-color: #555;
+    }
 
-        .tablink:hover {
-            background-color: #0090A6;
-        }
+    .tabcontent {
+      display: none;
+      padding: 60px 20px;
+      background-color: #f4f4f4;
+      color: #111;
+      min-height: 400px;
+    }
 
-        /* Tab Content */
-        .tabcontent {
-            display: none;
-            height: fit-content;
-            padding: 100px 20px;
-            color: #1A1A1A;
-            font-family: inherit;
-        }
+    /* Tab Background Shades */
+    #Info { background-color: #f9f9f9; }
+    #Services { background-color: #efefef; }
+    #Docs { background-color: #f2f2f2; }
+    #Events { background-color: #fafafa; }
 
-        /* Backgrounds for Tabs */
-        #Info {
-            background-color: #C7F9CC;
-        }
+    /* Links */
+    .link {
+      color: #fff;
+      background-color: #b30000;
+      padding: 2px 6px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
 
-        #Services {
-            background-color: #D0F4DE;
-        }
+    .link:hover {
+      background-color: #800000;
+    }
 
-        #Docs {
-            background-color: #B5EAEA;
-        }
+    table {
+      width: 100%;
+      border-spacing: 10px;
+    }
 
-        #Events {
-            background-color: #E3F2F9;
-        }
+    ul {
+      color: #111;
+      line-height: 1.6;
+    }
 
-  
+    .logoimg {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+    }
 
-        .link {
-            color: white;
-            background: #0077B6;
-            padding: 1px 4px;
-            text-decoration: none;
-            border-radius: 8px;
-        }
-
-        .logoimg {
-            width: 100px;
-            height: 100px;
-            vertical-align: middle;
-            text-align: center;
-        }
-    </style>
-
+    /* Responsive */
+    @media (max-width: 600px) {
+      .tablink {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-                    <h4>Welcome to the official website of</h4>
-                    <h1>Crescent Clinic</h1>
+  <header>
+    <h4>Welcome to the official website of</h4>
+    <h1>Crescent Clinic</h1>
+  </header>
 
+  <main>
+    <button type="button" class="tablink" onclick="openPage('Info', this, '#b30000')" id="defaultOpen">Info</button>
+    <button type="button" class="tablink" onclick="openPage('Services', this, '#444')">Services</button>
+    <button type="button" class="tablink" onclick="openPage('Docs', this, '#666')">Docs</button>
+    <button type="button" class="tablink" onclick="openPage('Events', this, '#999')">Events</button>
 
-    </header>
-    <main>
+    <div id="Info" class="tabcontent">
+      <h3>For Enquiry, Booking and Grievances</h3>
+      <table>
+        <tbody><tr>
+          <td>
+            <p>Location:</p>
+            <p>Email:</p>
+            <p>Phone/Whatsapp:</p>
+          </td>
+          <td>
+            <p><a href="#" class="link">Chattipparamba</a></p>
+            <p><a href="mailto:clinics.crescent@gmail.com" class="link">clinics.crescent@gmail.com</a></p>
+            <p><a href="https://wa.me/916282469048?text=Hello" class="link">6282469048</a></p>
+          </td>
+        </tr></tbody>
+      </table>
 
-        <button type="button" class="tablink" onclick="openPage('Info', this, '#2D6A4F')" id="defaultOpen">Info</button>
-        <button type="button" class="tablink" onclick="openPage('Services', this, '#40916C')">Services</button>
-        <button type="button" class="tablink" onclick="openPage('Docs', this, '#168AAD')">Docs</button>
-        <button type="button" class="tablink" onclick="openPage('Events', this, '#1D4E89')">Events</button>
-
-
-        <div id="Info" class="tabcontent">
-            <h3>For Enquiry, Booking and Grievances</h3>
-            <table>
-                <tr>
-                    <td>
-                        <p>Location: </p>
-                        <p>Email: </p>
-                        <p>Phone/Whatsapp:</p>
-
-                    </td>
-                    <td>
-                        <p><a href="https://www.google.com/maps/place/10%C2%B059'52.1%22N+76%C2%B005'30.6%22E/@10.9977937,76.0912858,249m/data=!3m2!1e3!4b1!4m5!3m4!1s0x0:0x6b2a1eef3ab26f04!8m2!3d10.9977924!4d76.091833"
-                                class="link"> Chattipparamba</a></p>
-                        <p><a href="mailto:clinics.crescent@gmail.com" class="link">clinics.crescent@gmail.com</a></p>
-                        <p><a href="https://wa.me/916282469048?text=Hello" target="_blank" class="link">6282469048</a>
-                        </p>
-
-                    </td>
-                </tr>
-            </table>
-            <h3>Consultation Policy</h3>
-            <p>
+      <h3>Consultation Policy</h3>
+       <p>
                 <b>Token:-</b> A valid token is mandatory for each consultation. Consultation will be based on token
                 order. Bystanders should take token separately for consultation. Both new patients and those with
                 previous prescriptions must obtain a token. No token is required for the first follow-up visit if it
@@ -255,47 +238,45 @@
                 the Kerala Act, 2012, without exception. All patients and visitors are expected to maintain discipline,
                 respect healthcare staff, and protect clinic property at all times.
             </p>
-        </div>
+    </div>
 
-        <div id="Services" class="tabcontent">
-            <h3>Medical Services</h3>
-            <ul>
-                <li>Medical Consultations</li>
-                <li>Disease Preventive Life Style</li>
-                <li>Acute &amp; Chronic illness management</li>
-                <li>Observation &amp; Care</li>
-            </ul>
-            <br>
-            <h3>Surgical Services</h3>
-            <ul>
-                <li>Wound Suturing</li>
-                <li>Incision and drainage of abscess</li>
-                <li>Excision of moles, warts, corns</li>
-                <li>Burns &amp; Wound care</li>
-                <li>Nail removal</li>
-            </ul>
-            <h3>Procedural Services</h3>
-            <ul>
-                <li>Urinary Bladder Catheterisation</li>
-                <li>Ryles Tube Insertion</li>
-                <li>Phlebotomy</li>
-                <li>IV Cannulation</li>
-                <li>PoP Casts for fracture or Immobilisation</li>
-                <li>Ear piercing</li>
+    <div id="Services" class="tabcontent">
+      <h3>Medical Services</h3>
+      <ul>
+        <li>Medical Consultations</li>
+        <li>Preventive Health &amp; Lifestyle</li>
+        <li>Acute &amp; Chronic Illness Management</li>
+        <li>Observation &amp; Care</li>
+      </ul>
 
-            </ul>
-            <br>
-            <h3>Certificates Services</h3>
+      <h3>Surgical Services</h3>
+      <ul>
+        <li>Wound Suturing</li>
+        <li>Abscess Drainage</li>
+        <li>Mole/Wart/Corn Removal</li>
+        <li>Burns &amp; Wound Care</li>
+        <li>Nail Procedures</li>
+      </ul>
 
-            <ul>
-                <li>Age Certificate</li>
-                <li>Food Handler's Certificate</li>
-            </ul>
+      <h3>Procedural Services</h3>
+      <ul>
+        <li>Catheterisation</li>
+        <li>Ryles Tube Insertion</li>
+        <li>Phlebotomy</li>
+        <li>IV Cannulation</li>
+        <li>POP Casts</li>
+        <li>Ear Piercing</li>
+      </ul>
 
-        </div>
+      <h3>Certificates</h3>
+      <ul>
+        <li>Age Certificate</li>
+        <li>Food Handler’s Certificate</li>
+      </ul>
+    </div>
 
-        <div id="Docs" class="tabcontent">
-              <h3>Dr. Muhammed Haseeb U, M.B.B.S , General Practitioner</h3>
+    <div id="Docs" class="tabcontent">
+      <h3>Dr. Muhammed Haseeb U, M.B.B.S , General Practitioner</h3>
             <p>
                 Dr. Haseeb is a highly respected physician with over 5 years of clinical experience. A proud alumnus of
                 <b>AIIMS (All India Institute Of Medical Sciences, Patna)</b>, where he developed broad expertise in
@@ -307,43 +288,33 @@
                 remains actively engaged in the latest developments in medicine, ensuring that patients receive the most
                 up-to-date and effective treatments available.
             </p>
+    </div>
 
-        </div>
+    <div id="Events" class="tabcontent">
+      <h3>Events</h3>
+      <p>Upcoming clinic updates and health awareness programs will appear here.</p>
+    </div>
+  </main>
 
-        <div id="Events" class="tabcontent">
-              <h3>Events</h3>
-        </div>
+  <footer>
+    &copy; 2025 Crescent Clinic. All rights reserved.
+  </footer>
 
-
-    </main>
-    <footer>
-        &copy; 2025 Crescent Clinic. All rights reserved.
-        <script>
-            function openPage(pageName, elmnt, color) {
-                // Hide all elements with class="tabcontent" by default */
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-
-                // Remove the background color of all tablinks/buttons
-                tablinks = document.getElementsByClassName("tablink");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].style.backgroundColor = "";
-                }
-
-                // Show the specific tab content
-                document.getElementById(pageName).style.display = "block";
-
-                // Add the specific color to the button used to open the tab content
-                elmnt.style.backgroundColor = color;
-            }
-
-            // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click(); 
-        </script>
-    </footer>
+  <script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    document.getElementById("defaultOpen").click();
+  </script>
 </body>
-
 </html>

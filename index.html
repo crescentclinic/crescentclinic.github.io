@@ -7,142 +7,201 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
 
   <style>
-    /* Global Styles */
-    body {
-      font-family: 'Open Sans', 'Segoe UI', Roboto, Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #111;
-      margin: 0;
-      padding: 0;
-    }
+/* =========================
+   Design Tokens
+   ========================= */
+:root {
+  --font-base: 'Open Sans', 'Segoe UI', Roboto, Arial, sans-serif;
 
-    h1, h2, h3, h4 {
-      margin-bottom: 15px;
-    }
+  --color-bg-page: #f4f4f4;
+  --color-bg-main: #ffffff;
+  --color-bg-header: #000000;
+  --color-bg-footer: #111111;
+  --color-bg-tab: #333333;
+  --color-bg-tab-hover: #555555;
 
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      color: #fff;
-    }
+  --color-text-dark: #111111;
+  --color-text-body: #222222;
+  --color-text-light: #eeeeee;
+  --color-text-muted: #dddddd;
 
-    h2 {
-      font-size: 1.9rem;
-      font-weight: 700;
-      color: #fff;
-    }
+  --color-accent: #b30000;
+  --color-accent-hover: #800000;
 
-    h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #b30000; /* Occasional red for emphasis */
-    }
+  --spacing-xs: 6px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+}
 
-    h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #ddd;
-    }
+/* =========================
+   Global Styles
+   ========================= */
+* {
+  box-sizing: border-box;
+}
 
-    p {
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.6;
-      color: #222;
-      text-align: justify;
-    }
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-    /* Header */
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 25px 30px;
-      text-align: left;
-    }
+/* =========================
+   Typography
+   ========================= */
+h1, h2, h3, h4 {
+  margin: 0 0 var(--spacing-sm);
+  font-weight: 600;
+}
 
-    /* Footer */
-    footer {
-      background-color: #111;
-      color: #eee;
-      text-align: center;
-      padding: 10px;
-      font-size: 0.9rem;
-    }
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #fff;
+}
 
-    /* Main Area */
-    main {
-      background-color: #fff;
-      padding: 20px;
-    }
+h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #fff;
+}
 
-    /* Tabs */
-    .tablink {
-      background-color: #333;
-      color: #fff;
-      float: left;
-      border: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      font-size: 17px;
-      width: 25%;
-      transition: all 0.3s ease;
-    }
+h3 {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
 
-    .tablink:hover {
-      background-color: #555;
-    }
+h4 {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
 
-    .tabcontent {
-      display: none;
-      padding: 60px 20px;
-      background-color: #f4f4f4;
-      color: #111;
-      min-height: 400px;
-    }
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-body);
+  text-align: justify;
+  margin-bottom: var(--spacing-md);
+}
 
-    /* Tab Background Shades */
-    #Info { background-color: #f9f9f9; }
-    #Services { background-color: #efefef; }
-    #Docs { background-color: #f2f2f2; }
-    #Events { background-color: #fafafa; }
+ul {
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
 
-    /* Links */
-    .link {
-      color: #fff;
-      background-color: #b30000;
-      padding: 2px 6px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+/* =========================
+   Layout
+   ========================= */
+header {
+  background-color: var(--color-bg-header);
+  color: #fff;
+  padding: var(--spacing-lg);
+}
 
-    .link:hover {
-      background-color: #800000;
-    }
+main {
+  background-color: var(--color-bg-main);
+  padding: var(--spacing-md);
+}
 
-    table {
-      width: 100%;
-      border-spacing: 10px;
-    }
+footer {
+  background-color: var(--color-bg-footer);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: var(--spacing-sm);
+  font-size: 0.9rem;
+}
 
-    ul {
-      color: #111;
-      line-height: 1.6;
-    }
+/* =========================
+   Tabs
+   ========================= */
+.tablink {
+  background-color: var(--color-bg-tab);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 1rem;
+  width: 25%;
+  float: left;
+  transition: background-color 0.3s ease;
+}
 
-    .logoimg {
-      width: 100px;
-      height: 100px;
-      text-align: center;
-      display: block;
-      margin: 0 auto;
-    }
+.tablink:hover {
+  background-color: var(--color-bg-tab-hover);
+}
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      .tablink {
-        width: 100%;
-      }
-    }
+.tabcontent {
+  display: none;
+  padding: 60px var(--spacing-md);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-dark);
+  min-height: 400px;
+  clear: both;
+}
+
+/* Subtle per-tab background variation */
+#Info     { background-color: #f9f9f9; }
+#Services { background-color: #efefef; }
+#Docs     { background-color: #f2f2f2; }
+#Events   { background-color: #fafafa; }
+
+/* =========================
+   Links & UI Elements
+   ========================= */
+.link {
+  color: #fff;
+  background-color: var(--color-accent);
+  padding: 2px 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.link:hover {
+  background-color: var(--color-accent-hover);
+}
+
+table {
+  width: 100%;
+  border-spacing: 10px;
+}
+
+/* =========================
+   Images
+   ========================= */
+.logoimg {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 600px) {
+  .tablink {
+    width: 100%;
+  }
+
+  header {
+    padding: var(--spacing-md);
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
   </style>
 </head>
 
@@ -154,7 +213,7 @@
 
   <main>
     <button type="button" class="tablink" onclick="openPage('Info', this, '#b30000')" id="defaultOpen">Info</button>
-    <button type="button" class="tablink" onclick="openPage('Services', this, '#444')">Services</button>
+    <button type="button" class="tablink" onclick="openPage('Services', this, '#444')">Services and Charges</button>
     <button type="button" class="tablink" onclick="openPage('Docs', this, '#666')">Docs</button>
     <button type="button" class="tablink" onclick="openPage('Events', this, '#999')">Events</button>
 
@@ -180,66 +239,17 @@
         </tr></tbody>
       </table>
 
-     <h3>Consultation Policy</h3>
-     <p>These policies can change from time to time as need or situation arises.</p>
+    
+<img src="clinic poster combined.png" alt="Clinic building" style="max-width:100%; height:auto;">
 
-<p>
-  <b>Token:</b> Please take a valid token for every consultation. Patients will be seen in the order of their token number.
-  If a bystander also wishes to consult the doctor, they must take a separate token. Both new patients and those coming with an old prescription need to take a token.
-  For your first follow-up within 7 days of the previous visit, a new token is not required.
-</p>
-
-<p>
-  <b>Emergency &amp; Accident Cases:</b> Our clinic provides <b>outpatient care only</b>. We do not have facilities for emergency or trauma treatment.
-  For emergencies, accidents, or urgent situations, please go to the nearest hospital with a 24-hour emergency or casualty department.
-</p>
-
-<p>
-  <b>Consultation Guidelines:</b> Only one bystander may accompany a patient inside the consultation or observation area.
-  A bystander is <b>required</b> for children and female patients, and during procedures like suturing, injections, or dressings.
-  The bystander must be 18 years or older. Our consultation and procedure charges are fixed.
-  The doctor may need to handle urgent walk-in cases, so waiting times can vary. We appreciate your patience and understanding.
-</p>
-
-<p>
-  <b>Home Services, Telecommunication &amp; Booking:</b> We do not provide home visits or prior appointment booking.
-  For emergencies outside clinic hours, kindly visit the nearest hospital.
-  Messages (SMS, email, WhatsApp) are used for administrative purposes only and not for medical advice.
-  Medical guidance is given only during in-person consultations—not over phone or social media.
-</p>
-
-<p>
-  <b>Conduct Inside the Clinic:</b> Please keep your phone on silent and maintain a calm and respectful environment.
-  Avoid loud conversations or arguments. Damaging clinic property may lead to legal action.
-  Taking photos, videos, or audio recordings without permission is not allowed.
-  Wearing a mask is mandatory for everyone inside the clinic.
-  Please avoid bringing children unless they are the patient.
-  All patients will be treated equally—personal influence or pressure will not be entertained.
-</p>
-
-<p>
-  <b>Disputes &amp; Grievances:</b> If you have any concerns or complaints, please share them in writing at the reception desk along with your contact details.
-  We value your feedback and aim to resolve issues promptly and respectfully.
-</p>
-
-<p>
-  <b>Disclaimer &amp; Limitation of Liability:</b> The treatment and advice provided at this clinic are based on the information shared by the patient.
-  Incomplete or incorrect details can affect treatment results.
-  Self-medication, changing treatment on your own, or not following medical advice can lead to complications.
-  Every individual responds differently to treatment, and results may vary.
-  While we take every precaution to minimize risks, unforeseen reactions to medicines can happen.
-</p>
-
-<p>
-  <b>Legal Protection:</b> Our clinic and staff are protected under the Kerala Healthcare Service Persons and Healthcare Service Institutions (Prevention of Violence and Damage to Property) Act, 2012 and the Bharatiya Nyaya Sanhita (BNS), 2023. 
-  Any form of threat, assault, harassment, or damage to property is a criminal offense and will lead to strict legal action.
-  We request all patients and visitors to treat staff with respect and help us maintain a safe and peaceful environment for everyone.
-</p>
+  
 
     </div>
 
     <div id="Services" class="tabcontent">
-      <h3>Medical Services</h3>
+  
+<h3>Clinic Services and Charges</h3>
+    
       <ul>
         <li>Medical Consultations</li>
         <li>Preventive Health &amp; Lifestyle</li>
